@@ -1,8 +1,8 @@
 machine:
-  environment:
-    XCODE_SCHEME: CicleCITest
-    APPNAME: CicleCITest
+  timezone: Asia/Tokyo
+  xcode:
+    version: "8.3"
 dependencies:
-  override:
-    - pod install:
-        timeout: 300
+  pre:
+    - (brew update || brew update)
+    - brew install swiftlint
